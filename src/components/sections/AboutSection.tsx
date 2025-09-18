@@ -22,23 +22,23 @@ const AboutSection = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            🇰🇷 Korea offers incredible opportunities for Myanmar students - from world-class universities like Seoul National University 
+            Korea offers incredible opportunities for Myanmar students - from world-class universities like Seoul National University 
             to innovative companies like Samsung and LG. Learning Korean opens doors to scholarships, career advancement, 
-            and cultural experiences that will transform your future. Let us help you unlock these amazing possibilities!
+            and cultural experiences that will transform your future. Let you unlock these amazing possibilities with us!
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="p-8 text-center">
             <div className="text-5xl mb-4">👩‍🏫</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Native Korean Teachers</h3>
-            <p className="text-gray-600">Learn from experienced native speakers who understand both Korean and Myanmar cultures, ensuring effective communication and learning</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Korean Teachers</h3>
+            <p className="text-gray-600">Learn from experienced speakers who understand both Korean and Myanmar cultures, ensuring effective communication and learning</p>
           </Card>
 
           <Card className="p-8 text-center">
             <div className="text-5xl mb-4">🏆</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Success</h3>
-            <p className="text-gray-600">98% TOPIK pass rate and 500+ successful students now studying and working in Korea - your dreams can become reality too!</p>
+            <p className="text-gray-600">98% TOPIK pass rate and successful students now studying and working in Korea - your dreams can become reality too!</p>
           </Card>
 
           <Card className="p-8 text-center">

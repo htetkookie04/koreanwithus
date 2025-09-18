@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
-import { ArrowRight, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 
 const CTASection = () => {
   return (
@@ -58,10 +58,6 @@ const CTASection = () => {
               <a href="tel:+95977467785" className="flex items-center space-x-2 hover:text-cherry-200 transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>+95 9774677855</span>
-              </a>
-              <a href="mailto:hangulwithus@gmail.com" className="flex items-center space-x-2 hover:text-cherry-200 transition-colors">
-                <Mail className="w-5 h-5" />
-                <span>Contact Us</span>
               </a>
             </div>
           </motion.div>

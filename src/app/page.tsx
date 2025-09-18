@@ -1,20 +1,29 @@
-'use client';
+import { Metadata } from 'next';
+import HomePageClient from './HomePageClient';
 
-import React from 'react';
-import HeroSection from '@/components/sections/HeroSection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import AboutSection from '@/components/sections/AboutSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import CTASection from '@/components/sections/CTASection';
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to Korean With Us language center in Myanmar. Learn Korean from beginner to advanced levels with experienced teachers. TOPIK preparation, speaking practice, and cultural immersion.",
+  openGraph: {
+    title: "Korean With Us - Learn Korean Language & Culture",
+    description: "Welcome to Korean With Us language center in Myanmar. Learn Korean from beginner to advanced levels with experienced teachers. TOPIK preparation, speaking practice, and cultural immersion.",
+    url: "https://koreanwithus.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Korean With Us - Learn Korean Language & Culture",
+      },
+    ],
+  },
+  twitter: {
+    title: "Korean With Us - Learn Korean Language & Culture",
+    description: "Welcome to Korean With Us language center in Myanmar. Learn Korean from beginner to advanced levels with experienced teachers. TOPIK preparation, speaking practice, and cultural immersion.",
+    images: ["/twitter-image.jpg"],
+  },
+};
 
 export default function Home() {
-  return (
-    <div className="overflow-hidden">
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <TestimonialsSection />
-      <CTASection />
-    </div>
-  );
+  return <HomePageClient />;
 }

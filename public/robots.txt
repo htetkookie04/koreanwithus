@@ -6,3 +6,14 @@ Sitemap: https://koreanwithus.com/sitemap.xml
 # Google Search Console Verification
 # Replace with your actual verification code
 # <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE_HERE" />
+
+# Crawl-delay for search engines
+Crawl-delay: 10
+
+# Directories
+Disallow: /admin/
+Disallow: /private/
+
+# File extensions
+Disallow: /*.json$
+Disallow: /*.md$

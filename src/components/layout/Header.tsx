@@ -24,6 +24,7 @@ const Header = () => {
     },
     { name: "Timetable", href: "/timetable" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 

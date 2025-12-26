@@ -23,5 +23,11 @@
     }
   },
   "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/_old_*",
+    "src/**/_old_*"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

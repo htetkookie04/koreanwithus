@@ -1,5 +1,3 @@
-import React from "react";
-
 const IntermediatePage = () => {
   return (
     <div className='min-h-screen pt-24 pb-16'>

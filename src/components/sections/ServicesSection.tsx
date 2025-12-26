@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { FaUsers, FaComments, FaAward, FaClock } from "react-icons/fa";
 
 const ServicesSection = () => {
@@ -98,7 +97,7 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Link href={service.href} className='block h-full'>
+              <Link to={service.href} className='block h-full'>
                 <Card className='p-6 h-full relative hover:shadow-lg transition-shadow cursor-pointer'>
                   <div className='flex flex-col h-full'>
                     <div className='text-cherry-600 mb-4'>{service.icon}</div>

@@ -1,7 +1,5 @@
-"use client";
-
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -32,7 +30,7 @@ const Header = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-6 py-3'>
           <div className='flex items-center justify-between'>
-            <Link href='/' className='flex items-center space-x-3'>
+            <Link to='/' className='flex items-center space-x-3'>
               <div className='w-8 h-8 bg-[#ec8da5] rounded-full flex items-center justify-center'>
                 <img
                   src='/favicon.svg'
@@ -73,7 +71,7 @@ const Header = () => {
                             {item.submenu.map((subItem) => (
                               <Link
                                 key={subItem.name}
-                                href={subItem.href}
+                                to={subItem.href}
                                 className='block px-4 py-2 text-gray-700 hover:bg-[#ec8da5]/10 hover:text-[#ec8da5] transition-colors rounded-lg mx-2'
                               >
                                 {subItem.name}
@@ -85,7 +83,7 @@ const Header = () => {
                     </div>
                   ) : (
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className='text-gray-700 hover:text-[#ec8da5] font-medium transition-colors px-3 py-2 rounded-full hover:bg-gray-50'
                     >
                       {item.name}
@@ -94,7 +92,7 @@ const Header = () => {
                 </div>
               ))}
               <Link
-                href='/contact'
+                to='/contact'
                 className='bg-[#ec8da5] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d97a92] transition-all duration-300 shadow-md hover:shadow-lg text-sm'
               >
                 Contact Us
@@ -127,7 +125,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className='block text-gray-700 hover:text-[#ec8da5] font-medium transition-colors'
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -138,7 +136,7 @@ const Header = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className='block text-sm text-gray-600 hover:text-[#ec8da5] transition-colors'
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -150,7 +148,7 @@ const Header = () => {
                 </div>
               ))}
               <Link
-                href='/contact'
+                to='/contact'
                 className='block w-full bg-[#ec8da5] text-white text-center px-6 py-3 rounded-full font-semibold hover:bg-[#d97a92] transition-all duration-300'
                 onClick={() => setIsMenuOpen(false)}
               >

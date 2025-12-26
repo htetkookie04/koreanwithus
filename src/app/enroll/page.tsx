@@ -1,8 +1,6 @@
-'use client';
-
-import React, { useState, Suspense } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -26,15 +24,15 @@ interface FullEnrollmentFormData {
 }
 
 function EnrollForm() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   // Get course info from URL params (in a real app, this would come from context/auth)
-  const courseId = searchParams?.get('courseId') || 'beginner';
-  const defaultCourseName = searchParams?.get('courseName') || 'Beginner Korean';
-  const defaultCourseLevel = searchParams?.get('courseLevel') || 'Beginner';
+  const courseId = searchParams.get('courseId') || 'beginner';
+  const defaultCourseName = searchParams.get('courseName') || 'Beginner Korean';
+  const defaultCourseLevel = searchParams.get('courseLevel') || 'Beginner';
 
   const { register, handleSubmit, formState: { errors } } = useForm<FullEnrollmentFormData>({
     defaultValues: {
@@ -113,7 +111,7 @@ function EnrollForm() {
   };
 
   const handleCancel = () => {
-    router.back();
+    navigate(-1);
   };
 
   return (
@@ -467,17 +465,6 @@ function EnrollForm() {
 }
 
 export default function EnrollPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-cherry-50 via-white to-primary-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cherry-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading enrollment form...</p>
-        </div>
-      </div>
-    }>
-      <EnrollForm />
-    </Suspense>
-  );
+  return <EnrollForm />;
 }
 

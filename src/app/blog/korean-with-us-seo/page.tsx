@@ -1,27 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Why Korean With Us Is the Best Choice for Learning Korean in 2025",
-  description: "Discover what makes Korean With Us the premier destination for serious Korean language learners. Learn about our native instructors, comprehensive curriculum, and success stories.",
-  openGraph: {
-    title: "Why Korean With Us Is the Best Choice for Learning Korean in 2025",
-    description: "Discover what makes Korean With Us the premier destination for serious Korean language learners. Learn about our native instructors, comprehensive curriculum, and success stories.",
-    url: "https://koreanwithus.com/blog/korean-with-us-seo",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Why Korean With Us Is the Best Choice for Learning Korean in 2025",
-      },
-    ],
-  },
-  twitter: {
-    title: "Why Korean With Us Is the Best Choice for Learning Korean in 2025",
-    description: "Discover what makes Korean With Us the premier destination for serious Korean language learners. Learn about our native instructors, comprehensive curriculum, and success stories.",
-    images: ["/twitter-image.jpg"],
-  },
-};
+import React from 'react';
 
 export default function KoreanWithUsSEOBlogPost() {
   return (

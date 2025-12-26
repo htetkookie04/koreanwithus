@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa";
 
@@ -68,7 +68,7 @@ const Footer = () => {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  href='/about'
+                  to='/about'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   About Us
@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/courses'
+                  to='/courses'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Courses
@@ -84,7 +84,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/timetable'
+                  to='/timetable'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Timetable
@@ -92,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/gallery'
+                  to='/gallery'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Gallery
@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/blog'
+                  to='/blog'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Blog
@@ -117,7 +117,7 @@ const Footer = () => {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  href='/courses/beginner'
+                  to='/courses/beginner'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Beginner Classes
@@ -125,7 +125,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/courses/intermediate'
+                  to='/courses/intermediate'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Intermediate Classes
@@ -133,7 +133,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/courses/speaking-practice'
+                  to='/courses/speaking-practice'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   Speaking Practice
@@ -141,7 +141,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href='/courses/topik-preparation'
+                  to='/courses/topik-preparation'
                   className='text-gray-600 hover:text-[#ec8da5] transition-colors'
                 >
                   TOPIK Preparation
@@ -170,7 +170,7 @@ const Footer = () => {
               </div>
             </div>
             <Link
-              href='/contact'
+              to='/contact'
               className='inline-block bg-[#ec8da5] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d97a92] transition-all duration-300 text-sm'
             >
               Get In Touch
@@ -186,13 +186,13 @@ const Footer = () => {
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link
-                href='/privacy'
+                to='/privacy'
                 className='text-gray-600 hover:text-[#ec8da5] transition-colors text-sm'
               >
                 Privacy Policy
               </Link>
               <Link
-                href='/terms'
+                to='/terms'
                 className='text-gray-600 hover:text-[#ec8da5] transition-colors text-sm'
               >
                 Terms of Service

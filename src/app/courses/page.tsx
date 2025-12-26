@@ -1,7 +1,5 @@
-"use client";
-
-import React, { useState, useEffect, Suspense } from "react";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -17,13 +15,12 @@ import {
 type TabType = "all" | "beginner" | "intermediate" | "speaking" | "topik";
 
 function CoursesPageContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState<TabType>("all");
 
   useEffect(() => {
-    if (!searchParams) return;
     const tabParam = searchParams.get("tab");
     if (tabParam) {
       const validTabs: TabType[] = ["all", "beginner", "intermediate", "speaking", "topik"];
@@ -35,9 +32,8 @@ function CoursesPageContent() {
 
   const handleTabChange = (tabId: TabType) => {
     setActiveTab(tabId);
-    if (!pathname) return;
-    const newUrl = tabId === "all" ? pathname : `${pathname}?tab=${tabId}`;
-    router.push(newUrl, { scroll: false });
+    const newUrl = tabId === "all" ? location.pathname : `${location.pathname}?tab=${tabId}`;
+    navigate(newUrl, { replace: true });
   };
   const courses = [
     {
@@ -743,13 +739,5 @@ function CoursesPageContent() {
 }
 
 export default function CoursesPage() {
-  return (
-    <Suspense fallback={
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-gray-600">Loading courses...</div>
-      </div>
-    }>
-      <CoursesPageContent />
-    </Suspense>
-  );
+  return <CoursesPageContent />;
 }

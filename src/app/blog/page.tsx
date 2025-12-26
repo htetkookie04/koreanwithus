@@ -1,27 +1,5 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Blog | Korean With Us - Learn Korean Language & Culture",
-  description: "Explore our blog for tips on learning Korean, Korean culture insights, and success stories from Korean With Us students.",
-  openGraph: {
-    title: "Blog | Korean With Us - Learn Korean Language & Culture",
-    description: "Explore our blog for tips on learning Korean, Korean culture insights, and success stories from Korean With Us students.",
-    url: "https://koreanwithus.com/blog",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Korean With Us Blog - Learn Korean Language & Culture",
-      },
-    ],
-  },
-  twitter: {
-    title: "Blog | Korean With Us - Learn Korean Language & Culture",
-    description: "Explore our blog for tips on learning Korean, Korean culture insights, and success stories from Korean With Us students.",
-    images: ["/twitter-image.jpg"],
-  },
-};
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BlogPage() {
   return (
@@ -32,9 +10,9 @@ export default function BlogPage() {
         <article className="bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              <a href="/blog/korean-with-us-seo" className="hover:text-[#ec8da5] transition-colors">
+              <Link to="/blog/korean-with-us-seo" className="hover:text-[#ec8da5] transition-colors">
                 Why Korean With Us Is the Best Choice for Learning Korean in 2025
-              </a>
+              </Link>
             </h2>
             <p className="text-gray-600 mb-4">
               Discover what makes Korean With Us the premier destination for serious Korean language learners...
